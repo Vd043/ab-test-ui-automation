@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cashmere Sweater</title>
+    <style>
+        body { font-family: sans-serif; margin: 24px; padding-bottom: 80px; }
+        .price { font-size: 20px; margin: 12px 0; }
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #222;
+            color: #fff;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body data-experiment="pdp-cta" data-variant="sticky-bottom">
+    <h1 id="product-title" data-testid="product-title">Cashmere Sweater</h1>
+    <div class="price" data-testid="price">$89.00</div>
+    <p>Product details and recommendations would go here.</p>
+
+    <div class="sticky-cta">
+        <span data-testid="sticky-price">$89.00</span>
+        <button data-testid="add-to-cart">Add to Cart</button>
+    </div>
+    <p>Cart: <span id="cart-count" data-testid="cart-count">0</span></p>
+
+    <script>
+        document.querySelector('.sticky-cta [data-testid="add-to-cart"]').addEventListener('click', function () {
+            document.getElementById('cart-count').textContent = '1';
+        });
+    </script>
+</body>
+</html>

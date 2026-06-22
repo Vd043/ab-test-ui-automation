@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ab-tests">
+    <listeners>
+        <listener class-name="com.abtest.listeners.ExperimentFailureListener"/>
+    </listeners>
+    <test name="pdp-tests">
+        <classes>
+            <class name="com.abtest.tests.PdpCoreFlowTest"/>
+        </classes>
+    </test>
+</suite>
